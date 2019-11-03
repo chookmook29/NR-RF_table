@@ -55,8 +55,11 @@ while loop_start < 1:
 		shift -= 1
 	card_bonus = input('Any card bonus?')
 	if card_bonus == 'y':
-			bonus = input('How much?')
-			shift += int(bonus)
+		bonus = input('How much?')
+		if bonus == '-1':
+			shift -= 1
+		else:
+			shift += 1
 	odds_position += shift 
 	if odds_position < 0:
 		print('Automatic CA result!!!')
