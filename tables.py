@@ -53,6 +53,13 @@ while loop_start < 1:
 	river_modifier = input('All attackers behind river not in winter/long winter turn?')
 	if river_modifier == 'y':
 		shift -= 1
+	winter = input('Axis winter attack?')
+	if winter == 'y':
+		winter_modifier = input('First long winter turn?')
+		if winter_modifier == 'y':
+			shift -= 2
+		else:
+			shift -= 1
 	card_bonus = input('Any card bonus?')
 	if card_bonus == 'y':
 		bonus = input('How much?')
